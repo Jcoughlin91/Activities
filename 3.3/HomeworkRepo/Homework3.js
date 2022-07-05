@@ -11,45 +11,49 @@ greetCustomer();
 
 3
 function getPizzaOrder(size, crust, ...toppings) {
-let order = `One ${size} pizza with ${crust} and ${toppings}`;  
+  
+let order = `One ${size} ${crust} crust pizza with`;  
   for (let topping of toppings) {
-order += `${toppings}`;
+order += `${topping}`;
   }
-  console.log(`${order}. coming up`);
+console.log(`${order}...coming up!`);
 return [size, crust, toppings];
 } 
-let customerOrder = getPizzaOrder(
-  "large", 
-  "thick",
-  "fish", 
-  "pepper",
-  "bean"
+let customerOrder = getPizzaOrder( "large", "thick", " veggies ", " Pineapple ", " onions "
 );
 
 
 
 //4
-function preparePizza(pizza) {
-  console.log ("Your order is coming!");
-  return{
-    size: pizza[0],
-    crust: pizza[1],
-    toppings: pizza[2] 
-  }
-   
+function preparePizza([orderSize, orderCrust, orderToppings]) {
+  console.log ("...Your order is coming!...");
+  return {
+    size: orderSize,
+    crust: orderCrust,
+    toppings: orderToppings
 };
+}
+ let cookedPizza = preparePizza(customerOder)
+
 
 //5
-
 function servePizza (pizza) {
-console.log ("Order up! Here's your large thick crust pizza!")
-  size: pizza[0],
-  crust: pizza[1],
-  toppings: pizza[2]
-  return pizza 
-};
+let orderReady = `Order up! Here's your ${pizza.size} ${pizza.crust} crust pizza! `;
+
+for (let topping of pizza.toppings) {
+  orderReady += `${topping},`;
+}
+console.log(`${topping}, Enjoy!`);
+return pizzza;
+}
+servePizza(cookedPizza);
+
 
 //6
-function preparePizza
+greetCustomer();
 
+const myPizza =
+servePizza(preparePizza(getPizzaOrder("Cheese", "meat", "veggies", "Pineapple")));
+
+console.log(myPizza);
 
